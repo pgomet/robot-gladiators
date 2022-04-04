@@ -9,11 +9,11 @@ console.log(playerName, playerAttack, playerHealth);
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 console.log(enemyNames);
 console.log(enemyNames.length);
-for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
-    console.log(i);
-    console.log(enemyNames[i] + " is at " + i + " index");
-  }
+for (var i = 0; i < enemyNames.length; i++) {
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    fight(pickedEnemyName);
+}
 var enemyHealth = 50;
 var enemyAttack = 12;
 
@@ -28,7 +28,9 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     console.log(
       playerName + " attacked " +  + ". " +  + " now has " + enemyHealth + " health remaining."
     );
-  
+  while(enemyHealth > 0) {
+
+  }
     // check enemy's health
     if (enemyHealth <= 0) {
       window.alert( + " has died!");
